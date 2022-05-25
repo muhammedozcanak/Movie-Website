@@ -1,0 +1,54 @@
+.sign-up {
+  padding-top: 25px;
+}
+
+.title-signup {
+  text-align: center;
+  font-size: 35px;
+  color: darkslateblue;
+  padding: 30px;
+}
+/* belirli bir genişlik verip formun içindekileri ortaladık margin auto ile sağdan soldan eşit bir şekilde kıstık*/
+.sign-up {
+  width: 600px;
+  margin: auto;
+}
+/* bu elemanların hepsini block eleman yaparak alt alta sıraladık. .sign-up input:not([type="checkbox"]), özelliği tüm inputları alır fakat type="checkbox olan inputu almaz */
+.sign-up input:not([type="checkbox"]),
+.sign-up label,
+.sign-up select {
+  display: block;
+  font-size: 20px;
+  width: 90%;
+  margin-top: 10px;
+  transition: all 0.5s;
+}
+/*.sign-up input[type="checkbox"] + label ile sign-up input[type="checkbox"] dan sonra gelen labelleri de kattık */
+.sign-up input[type="checkbox"],
+.sign-up input[type="checkbox"] + label {
+  display: inline-block;
+  width: auto;
+}
+
+.sign-up button[type="submit"] {
+  display: block;
+  margin: 20px 0 20px 0;
+  margin-left: 40%;
+  margin-right: 40%;
+}
+
+.sign-up input:not([type="checkbox"]),
+.sign-up select {
+  border: 1px solid rgb(90, 56, 200);
+  padding: 7px;
+  border-radius: 5px;
+}
+
+.sign-up input:not([type="checkbox"]):focus,
+.sign-up select:focus {
+  /* outline: none; ile diğer özellikleri inaktif ettik  */
+  outline: none;
+  border: 1px solid rgb(38, 244, 6);
+  width: 100%;
+  transition: all 0.5s;
+}

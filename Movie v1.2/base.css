@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+/* bu özellik ile px olarak tanımladığımız değerleri rem ile değiştirip daha responsive tasarım elde edebiliriz mesela 30px yazılan yere 3rem yaparız ve bu 30 px e karşılık gelir @media içerisinde de tanımladığımız % değerlerine göre fontlar büyüyüp küçülür */
+
+/* bu tanımlamaan sonra 1 rem 16 pixele denk gelecek şekilde oluşturuldu px olarak tanımlanan özellikler rem ile değiştirildi örneğin 32px olarak tanımlanan h1 etiketi 0.5rem yazılarak güncellendi ve daha responsive bir tasarım elde edildi. */
+html {
+  /*Başa dön ikonuna tıkladığımızda birden değil de yavaş yavaş yukarı çıkması için*/
+  scroll-behavior: smooth;
+  /* font size 62.5% olarak vermemizin sebebi 10px karşılık gelmesi yüzde olarak tanımlamak daha responsive bir tasarım sağlar. 62.5% yerine 10px de yazılabilirdi ama yüzde olarak vermek daha iyi */
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+}
+
+.offers {
+  width: 100%;
+}
+
+/* Kullandığımız bu breakpointlerin doğruluğu kanıtlanmış. */
+@media (min-width: 576px) {
+  html {
+    scroll-behavior: smooth;
+    font-size: 65%;
+  }
+  .container {
+    margin: 0 auto;
+    width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+    scroll-behavior: smooth;
+    font-size: 70%;
+  }
+  .container {
+    margin: 0 auto;
+    width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  html {
+    scroll-behavior: smooth;
+    font-size: 80%;
+  }
+  .container {
+    margin: 0 auto;
+    width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    scroll-behavior: smooth;
+    font-size: 90%;
+  }
+  .container {
+    margin: 0 auto;
+    width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  html {
+    scroll-behavior: smooth;
+    font-size: 100%;
+  }
+  .container {
+    margin: 0 auto;
+    width: 1320px;
+  }
+}

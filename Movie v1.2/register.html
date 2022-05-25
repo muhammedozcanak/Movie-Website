@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- responsive tasarım -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kayıt Ol</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="form-styles.css" />
+  </head>
+  <body id="body">
+    <header class="main-header">
+      <a href="#">MovieApp</a>
+      <nav class="main-nav">
+        <a href="#">Filmer</a>
+        <a href="#">Diziler</a>
+        <a class="btn btn-secondary" href="#" id="login">Login</a>
+      </nav>
+    </header>
+
+    <main class="sign-up">
+      <h1 class="title-signup">Hesap Oluştur</h1>
+      <form action="" class="form-signup">
+        <label for="isim">Adınız</label>
+        <input type="text" id="isim" placeholder="Adınızı Girin" />
+
+        <label for="soyad">Soyadınız</label>
+        <input type="text" id="soyad" placeholder="Soyadınızı Girin" />
+
+        <label for="email">Mail Adresi</label>
+        <input type="email" id="email" placeholder="Mail Adresinizi Girin" />
+
+        <label for="parola">Parola</label>
+        <input type="password" id="parola" placeholder="Parola Belirleyin" />
+
+        <label for="cinsiyet">Cinsiyetiniz</label>
+        <select id="cinsiyet">
+          <option value="">Seçiniz</option>
+          <option value="">Erkek</option>
+          <option value="">Kadın</option>
+        </select>
+
+        <input type="checkbox" id="kosul" />
+        <label for="kosul"
+          >Kabul ediyorum <a href="#">Yasal Hüküm &amp; Koşullar</a></label
+        >
+        <button type="submit" class="btn btn-primary">Kayıt Ol</button>
+      </form>
+    </main>
+
+    <footer>
+      <div class="offers">
+        <div class="row-c">
+          <div class="f-col-2">
+            <ul id="f-footer-links">
+              <li><a href="">About</a></li>
+              <li><a href="">Blog</a></li>
+              <li><a href="">FAQ</a></li>
+              <li><a href="">Forum</a></li>
+              <li><a href="">Contact</a></li>
+            </ul>
+          </div>
+          <div class="f-col-2">
+            <!-- iconları ekledik -->
+            <ul id="f-social-links">
+              <li><a href="" class="fab fa-facebook"></a></li>
+              <li><a href="" class="fab fa-twitter"></a></li>
+              <li><a href="" class="fab fa-instagram"></a></li>
+              <li><a href="" class="fab fa-telegram"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- body'e id tanımadık a ettiketi içine 1 ikon ekledik -->
+    <a href="#body" id="backToTop">
+      <i class="fas fa-chevron-circle-up"></i>
+    </a>
+  </body>
+</html>

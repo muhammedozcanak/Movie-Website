@@ -1,0 +1,346 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Macondo&display=swap");
+@import url("buttons.css");
+@import url("base.css");
+
+#showcase {
+  /* Arka plana resim ekledik linear-gradient ile saydam bir renk ekledik*/
+  background: linear-gradient(
+      to bottom,
+      rgba(16, 86, 148, 0.2),
+      rgba(13, 6, 87, 0.2)
+    ),
+    url("marvel.jpg");
+  /* Arka planı ortaladık orta üstü gösteriyor */
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+#showcase .content {
+  background-color: rgba(89, 85, 85, 0.5);
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  /* transform: translate(-50%, -50%); ile yazıyı tam olarak ortaya getirdik. Normalde yazının da bir genişlik ve yüksekliği olduğu için tam olarak ortaya gelmiyordu. aşağı ve sağa bir taşma olduğu için -50% -50% kullandık*/
+  transform: translate(-50%, -50%);
+  font-family: "Macondo", cursive;
+  font-size: 1.875em;
+  color: antiquewhite;
+  padding: 1.25rem;
+  width: 50%;
+  text-align: center;
+}
+
+#how-it-works {
+  background-color: #fff;
+  padding: 0.625rem;
+  text-align: center;
+}
+
+.main-header {
+  background-color: #fc997c;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+}
+
+.main-nav {
+  display: inline-block;
+  /* main-nav içerisinde linklerlimiz var main-nav block eleman kadar yer kaplıyor  biz bu yazıları MovieApp yazısı ile yan yana getirmek istiyorsak calc(100% - 74px) özelliğini kullanmalıyız ekranı ne kadar küçültürsek küçültelim hep yan yana kalacak 74px MovieApp yazısının kapladığı alandır. */
+  width: calc(100% - 10.1875rem);
+  text-align: right;
+  padding: 0.6rem;
+}
+
+a {
+  padding: 0.6rem;
+  font-size: 1.5625rem;
+  text-decoration: none;
+}
+
+.main-nav a::before {
+  content: "\21A0";
+}
+/* .main-nav classının altında a etiketine sahip tüm etiketlerin üstüne gelince rengini yeşil yap*/
+.main-nav a:hover {
+  color: green;
+}
+/* uygulamaya tıklandığı anda olacaklar*/
+.main-nav a:active {
+  color: red;
+}
+
+/* Loginin önündeki işareti aldık */
+.main-nav #login::before {
+  content: none;
+}
+
+h1 {
+  color: aliceblue;
+}
+
+.row-c::after {
+  content: "";
+  display: inline-block;
+  clear: both;
+}
+
+.col {
+  float: left;
+  width: 33.3%;
+  padding: 0.3125rem 1.25rem;
+}
+
+.col h3 {
+  font-size: 1.5625rem;
+}
+
+.row h2 {
+  font-size: 2.1875rem;
+  margin-bottom: 1rem;
+  color: maroon;
+}
+
+.block1 {
+  background-color: #fff;
+  display: inline-block;
+  width: calc(50% - 0.125rem);
+  height: 25rem;
+  /*bunu yapmazsak blocklar üstte durmayacak*/
+  vertical-align: top;
+}
+
+.b1 {
+  background-image: url(drstrange.jpg);
+  background-position: center;
+  /*resmi çerçeve içine sığdırmak için*/
+  background-size: cover;
+}
+
+.b2 {
+  background-color: rgb(186, 176, 189);
+  padding: 1.25rem 2.1875rem;
+  text-align: justify;
+}
+
+.bolum3 {
+  margin: 2.8125rem 0px;
+}
+
+.col i {
+  color: green;
+}
+
+.col4 {
+  background-color: antiquewhite;
+  float: left;
+  width: calc(33% - 1.25rem);
+  text-align: center;
+  padding: 0.625rem 0.625rem 1.25rem 0.625rem;
+  border-radius: 0.4375rem;
+  /* box shadowdaki ilk değer 0.5rem yataydaki 0.625rem dikeydeki ve + değer oldukları için soldak sağa yukardan aşağıya şeklinde olur. 2.1875rem de bulanlıklığı belirtir ne kadar arttırırsak bulanıklık o kadar artar 4. olarak verdiğimiz değer yani 0.375rem de gölgenin yayılma alanını belirler son olarak verdiğimiz renk ise gölge rengidir 0.2 ise rengin saydamlığıdır*/
+  box-shadow: 0.5rem 0.625rem 2.1875rem 0.375rem rgb(71, 68, 68, 0.2);
+  /*transition: box-shadow 1s; özelliği bir efektin daha yavaş etkin olmasını sağlar transition: den sonra hangi özelliği istiyorsak örneğin box-shadow özelliği ismini yazıyoruz ve süreyi belirliyoruz */
+  transition: box-shadow 1s;
+}
+/* Kartların üzerine gelince arka plandaki gölgelendirmenin şeffaflığını değiştireceğiz */
+.col4:hover {
+  box-shadow: 0.5rem 0.625rem 2.1875rem 0.375rem rgb(71, 68, 68, 0.8);
+}
+
+#h2-1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.dis {
+  margin: 0 auto;
+  width: 63%;
+  height: 31.25rem;
+}
+
+.advance {
+  border: solid 0.3125rem rgb(70, 138, 138);
+  border-radius: 0.625rem;
+  color: #fc997c;
+}
+
+.onecik {
+  background-color: #396eb0;
+  color: white;
+  position: relative;
+  top: -1.3125rem;
+  margin: 0 0.625rem;
+}
+
+.dis li {
+  margin: 0.3125rem 0px;
+}
+
+main {
+  min-height: calc(100vh - 18px);
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 0.625rem;
+  right: 0.625rem;
+}
+
+#backToTop i {
+  color: #6a7787;
+  font-size: 2.8125rem;
+  transition: color 0.6s;
+}
+#backToTop i:hover {
+  color: #2a65ac;
+}
+
+.col-5 {
+  background: linear-gradient(to bottom, #fc997c 0%, #cd4015 100%);
+  text-align: center;
+  width: 33.3%;
+  float: left;
+  font-size: 1.25rem;
+  padding: 1.25rem;
+  color: white;
+}
+
+.counter h4 {
+  margin: 0px;
+}
+
+.col-6 {
+  position: relative;
+  width: 31%;
+  height: 25rem;
+  float: left;
+  margin: 0.625rem;
+}
+section {
+  clear: both;
+}
+
+.col-6-image {
+  height: 25rem;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.6s;
+  box-shadow: 0.5rem 0.625rem 2.1875rem 0.375rem rgba(31, 30, 30, 0.9);
+}
+
+.col-6-image:hover {
+  height: 26.25rem;
+  width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: all 0.6s;
+  box-shadow: 0.5rem 0.625rem 2.1875rem 0.375rem rgba(89, 83, 83, 0.6);
+  transform: translateY(-1.25rem);
+}
+
+#categories {
+  height: 43.75rem;
+}
+
+.movies-title {
+  text-align: center;
+  color: rgba(112, 12, 225, 0.7);
+  font-size: 2.1875rem;
+  font-family: "Macondo", cursive;
+}
+
+.card-info h3 {
+  text-align: center;
+  font-size: 1.875rem;
+  margin: 0.625rem;
+  font-family: "Macondo", cursive;
+  color: blueviolet;
+}
+
+.card-info p {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.card-info .btn-primary {
+  font-size: 1.25rem;
+  border-radius: 0.3125rem 0.8125rem;
+  background-color: darkmagenta;
+}
+
+footer {
+  background-color: #292328;
+  padding: 3.75rem;
+  clear: both;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5625rem;
+}
+
+footer ul {
+  margin: 0;
+  padding: 0;
+}
+
+footer ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin-left: 0.3125rem;
+}
+
+#f-social-links {
+  text-align: right;
+  vertical-align: top;
+}
+
+.f-col-2 {
+  display: inline-block;
+  width: calc(50% - 0.125rem);
+}
+
+.fab {
+  padding: 0.625rem;
+  font-size: 1.875rem;
+  border-radius: 0.625rem;
+}
+
+.fab:hover {
+  opacity: 0.6;
+  transition: all 0.4s;
+}
+
+.fa-facebook {
+  background-color: #2a65ac;
+}
+
+.fa-twitter {
+  background-color: #587ede;
+}
+
+.fa-instagram {
+  background-color: #d40ea6;
+}
+
+.fa-telegram {
+  background-color: #6a99d7;
+}
+
+@media (max-width: 768px) {
+  .col-6,
+  .col4,
+  .block1,
+  .col {
+    width: 100%;
+  }
+}
